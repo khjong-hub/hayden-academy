@@ -1,0 +1,38 @@
+name: HAYDEN ACADEMY · Weekly
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "10 7 * * 1"
+      timezone: "Asia/Seoul"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hayden-academy-weekly
+  cancel-in-progress: false
+
+jobs:
+  update-weekly:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Generate Weekly issue
+        run: python scripts/generate_issue.py weekly
+
+      - name: Commit Weekly update
+        run: |
+          git config user.name "hayden-academy-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/weekly automation/status.json
+          git diff --cached --quiet || git commit -m "auto: update weekly issue"
+          git push
