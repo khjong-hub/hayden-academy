@@ -1,16 +1,15 @@
 name: HAYDEN ACADEMY · Weekly
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 10 * * 1'
-permissions:
-  contents: write
 jobs:
-  update-weekly:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Update timestamp
-        run: |
-          echo "HAYDEN ACADEMY Weekly automation check"
-          echo "Scheduled workflow is active."
+      - run: |
+          test -f index.html
+          test -f daily/index.html
+          test -f weekly/index.html
+          test -f monthly/index.html
+          test -f english/index.html
+          echo "HAYDEN ACADEMY structure OK"
