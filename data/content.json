@@ -1,0 +1,14 @@
+{
+  "site": "HAYDEN ACADEMY",
+  "version": "v0.4",
+  "cadence": {
+    "daily": "뉴스·주요 토픽·오늘의 학습 포인트",
+    "weekly": "개인 매거진·학습·실제 적용",
+    "monthly": "리뷰·축적·다음 달 방향"
+  },
+  "english": {
+    "daily": "10분 읽기 + 표현 3개",
+    "weekly": "5문장 쓰기",
+    "monthly": "오답·반복 표현 리뷰"
+  }
+}

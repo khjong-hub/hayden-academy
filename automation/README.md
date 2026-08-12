@@ -1,22 +1,18 @@
-# HAYDEN ACADEMY v0.4 · Automation
+# v0.4 자동화 구조
 
-## 현재 자동화
-- Daily: 매일 07:00 KST
-- Weekly: 매주 월요일 07:10 KST
-- Monthly: 매월 1일 07:20 KST
-- 각 workflow가 실행되면 `data/`에 새 issue 초안을 만들고 자동 commit/push 합니다.
+현재 버전은 **자동화 뼈대**를 먼저 구축한 상태입니다.
 
-## 현재 단계의 한계
-이 버전은 **자동화 골격(scaffold)** 입니다.
-실제 뉴스 수집, relevance filtering, AI 편집, 이메일 알림은 아직 연결하지 않았습니다.
+- Daily: `.github/workflows/daily.yml`
+- Weekly: `.github/workflows/weekly.yml`
+- Monthly: `.github/workflows/monthly.yml`
 
-다음 단계:
-1. 뉴스/RSS/공식기관 수집
-2. 중복·저품질 제거
-3. Hayden 관련성 평가
-4. AI editorial analysis
-5. Daily → Weekly → Monthly 누적 분석
-6. 이메일/알림
+중요: GitHub Actions가 성공했다고 해서 외부 뉴스가 자동으로 수집되는 것은 아닙니다.
+실제 뉴스 수집은 별도 데이터 소스/API 또는 사람이 제공한 자료가 필요합니다.
 
-## 개인정보
-Family Money의 실제 소득·지출·자산·투자정보는 공개 repository에 넣지 않습니다.
+따라서 v0.4의 안전한 운영 방식은:
+1. ChatGPT에서 콘텐츠를 작성/검토
+2. 파일 세트에 반영
+3. GitHub Desktop으로 Commit → Push
+4. GitHub Pages에서 확인
+
+이후 필요하면 뉴스 소스 연결을 단계적으로 자동화합니다.
