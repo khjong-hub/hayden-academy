@@ -16,6 +16,7 @@
     <a href="../daily/index.html">Daily</a>
     <a href="../weekly/index.html">Weekly</a>
     <a href="../monthly/index.html">Monthly</a>
+    <a href="../archive/index.html">Archive</a>
     <a href="../economy/index.html">Economy</a>
     <a href="../expertise/index.html">Expertise</a>
     <a href="../faith/index.html">Faith</a>
@@ -99,6 +100,23 @@
     <p class="dek">퇴근 전 5분. 오늘 만난 사람 한 명을 떠올리고, 그를 향해 ‘오래 참음’을 실천할 구체적 한 가지를 적는다. 시장은 내가 못 바꾸지만, 이 한 줄은 오늘 바꿀 수 있다.</p>
   </section>
 
+  <section class="check">
+    <div class="meta">QUICK CHECK · 오늘의 점검</div>
+    <h2>3분, 오늘을 남긴다</h2>
+    <p class="dek">누르면 이 기기에 기록되어 월간 활용도 대시보드에 반영된다.</p>
+    <div class="mcq" id="mcq-en">
+      <p><strong>ENGLISH.</strong> “It keeps no record of wrongs.”에서 <em>keep no record of ~</em>의 뜻은?</p>
+      <button class="opt" onclick="haPick(this,false)">~을 크게 기록하다</button>
+      <button class="opt" data-correct onclick="haPick(this,true)">~을 마음에 담아두지 않다</button>
+      <button class="opt" onclick="haPick(this,false)">~을 자주 후회하다</button>
+      <div class="result" hidden>정답 ✓ 기록되었습니다.</div>
+    </div>
+    <div class="check-grid">
+      <button class="check-btn" onclick="HA.logQuiz('faith');this.classList.add('done');this.textContent='말씀 묵상 ✓'">오늘 말씀을 묵상했다</button>
+      <button class="check-btn" onclick="HA.logQuiz('economy');this.classList.add('done');this.textContent='경제 브리핑 ✓'">오늘 경제 브리핑을 읽었다</button>
+    </div>
+  </section>
+
   <section class="sources">
     <div class="meta">SOURCES &amp; FURTHER READING</div>
     <p>KORI Insight · 2026년 9월 3주차 경제뉴스 분석(코스피 7천선 이탈, 한은 기준금리 3.00%, 추석 민생안정대책) · 2026.9</p>
@@ -109,5 +127,15 @@
 </main>
 
 <footer class="wrap footer">HAYDEN ACADEMY · DAILY · 16 SEP 2026</footer>
+<script src="../js/tracker.js"></script>
+<script>
+if(window.HA)HA.logVisit();
+function haPick(btn,correct){
+  var box=btn.closest('.mcq'); if(box.dataset.done)return; box.dataset.done='1';
+  box.querySelectorAll('.opt').forEach(function(o){o.classList.add(o.hasAttribute('data-correct')?'correct':'wrong');o.disabled=true;});
+  if(correct&&window.HA)HA.logQuiz('english');
+  var r=box.querySelector('.result'); if(r){r.hidden=false; if(!correct)r.textContent='정답은 강조된 항목입니다. 다시 소리 내어 읽어보세요.';}
+}
+</script>
 </body>
 </html>

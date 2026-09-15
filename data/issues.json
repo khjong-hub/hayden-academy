@@ -1,0 +1,45 @@
+{
+  "updated": "2026-09-16",
+  "issues": [
+    {
+      "type": "monthly",
+      "date": "2026-09-01",
+      "url": "monthly/2026-09.html",
+      "title": "MONTHLY · 2026년 9월 리뷰",
+      "summary": "9월의 축적을 돌아보고 다음 달 방향을 정한다. 개인 활용도 대시보드(접속·연속·퀴즈) 첫 도입.",
+      "keywords": ["월간", "리뷰", "9월", "대시보드", "피드백", "습관", "다음 달", "활용도"]
+    },
+    {
+      "type": "weekly",
+      "date": "2026-09-16",
+      "url": "weekly/2026-W38.html",
+      "title": "The Seed · 흔들리는 시장, 흔들리지 않는 원칙",
+      "summary": "코스피 7,000선 붕괴와 유가 급등 속에서 흔들리지 않을 나의 원칙. 사랑의 실천을 한 주의 태도로. Work/English/Faith/Money 관찰.",
+      "keywords": ["the seed", "원칙", "변동성", "코스피", "사랑", "루틴", "주간", "2026-W38"]
+    },
+    {
+      "type": "daily",
+      "date": "2026-09-16",
+      "url": "daily/2026-09-16.html",
+      "title": "코스피 7,000선이 무너졌다",
+      "summary": "코스피 6,909, 한은 금리 3.00%, 호르무즈발 유가 급등, AI 속도조절·OpenAI IPO 연기, 청년미래적금·추석대책. 고린도전서 13·누가복음 7, 영어 keep no record.",
+      "keywords": ["코스피", "금리", "유가", "호르무즈", "AI", "OpenAI", "청년미래적금", "추석", "고린도전서", "사랑", "누가복음", "love is patient"]
+    },
+    {
+      "type": "daily",
+      "date": "2026-08-13",
+      "url": "daily/2026-08-13.html",
+      "title": "한국이 '다음 산업'을 준비하기 시작했다",
+      "summary": "7대 SEED 전략(SMR·양자·우주·바이오), AI 에이전트 사이버공격, 에너지 지정학, 장애인 고용·직업재활. 에스겔 12·마태복음 18, 영어 prepare for.",
+      "keywords": ["7대 SEED", "반도체", "AI", "에너지", "장애인 고용", "직업재활", "에스겔", "마태복음", "용서", "prepare for", "양자", "SMR"]
+    },
+    {
+      "type": "weekly",
+      "date": "2026-08-11",
+      "url": "weekly/the-seed.html",
+      "title": "The Seed · 5년 뒤 무엇이 달라져 있어야 하는가?",
+      "summary": "WEEKLY/001. 성장은 큰 결심보다 반복되는 작은 선택에서. Work/English/Faith/Money 관찰.",
+      "keywords": ["the seed", "5년", "성장", "작은 배움", "방향", "습관", "주간"]
+    }
+  ]
+}
