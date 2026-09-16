@@ -13,7 +13,7 @@
   --rule:#ded8ca;       /* hairlines */
   --rule-strong:#1c1a12;/* structural rules */
   --accent:#9a2414;     /* brick red */
-  --max:1140px;
+  --max:1400px;
   --sans:"Libre Franklin","Noto Sans KR",system-ui,"Apple SD Gothic Neo",sans-serif;
   --serif:Georgia,"Nanum Myeongjo","Noto Serif KR",serif;
 }
@@ -21,7 +21,7 @@
 html{-webkit-text-size-adjust:100%}
 body{
   margin:0;background:var(--paper);color:var(--body);
-  font-family:var(--serif);line-height:1.75;
+  font-family:var(--serif);font-size:17px;line-height:1.78;
   -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
 }
 a{color:inherit;text-decoration:none}
@@ -36,7 +36,8 @@ em{font-style:italic}
 
 /* ---- masthead ---- */
 .masthead{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding-bottom:16px;border-bottom:2px solid var(--rule-strong)}
-.brand{font-family:var(--serif);font-weight:800;font-size:clamp(26px,4vw,38px);letter-spacing:-.02em;color:var(--ink);line-height:1}
+.brand{font-family:var(--serif);font-weight:800;font-size:clamp(27px,4vw,40px);letter-spacing:-.02em;color:var(--ink);line-height:1}
+.brand::after{content:"A PERSONAL LEARNING MAGAZINE";display:block;font-family:var(--sans);font-size:9.5px;font-weight:700;letter-spacing:.2em;color:var(--muted);margin-top:7px}
 .edition{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;text-align:right;line-height:1.5}
 nav{display:flex;flex-wrap:wrap;margin-top:12px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
 nav a{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.11em;padding:4px 13px 4px 0;margin-right:13px;text-transform:uppercase;color:var(--muted);transition:color .15s}
@@ -60,7 +61,7 @@ p{margin:0 0 15px}
 .page{padding-top:44px;padding-bottom:84px}
 
 /* ---- intro / dek (myeongjo, darker for focus) ---- */
-.intro,.dek{font-family:var(--serif);font-size:clamp(17px,1.7vw,19px);line-height:1.85;color:#413d33;max-width:44rem}
+.intro,.dek{font-family:var(--serif);font-size:clamp(18.5px,1.7vw,21px);line-height:1.9;color:#3d3930;max-width:46rem}
 .dek{color:#4a463b}
 
 .paper-head{border-bottom:1px solid var(--rule-strong);padding-bottom:26px;margin-bottom:30px}
@@ -73,21 +74,21 @@ p{margin:0 0 15px}
   font-size:3.4em;line-height:.82;padding:6px 10px 0 0;
 }
 /* ---- HAYDEN'S LENS callout ---- */
-.note{background:var(--band);border-left:4px solid var(--accent);padding:16px 20px;margin:18px 0 4px;color:var(--body);max-width:52rem;border-radius:0 4px 4px 0;font-size:15.5px;line-height:1.7}
+.note{background:var(--band);border-left:4px solid var(--accent);padding:16px 20px;margin:18px 0 4px;color:var(--body);max-width:54rem;border-radius:0 4px 4px 0;font-size:16.5px;line-height:1.78}
 .note strong{font-family:var(--sans);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent)}
 
 /* ---- story grid (newspaper columns with vertical rules) ---- */
 .story-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:0;margin-top:34px;border-top:2px solid var(--rule-strong)}
 .story{padding:16px 26px 6px 0}
 .story+.story{border-left:1px solid var(--rule);padding-left:26px}
-.story p{font-family:var(--serif);color:var(--body);line-height:1.72;font-size:15.5px}
+.story p{font-family:var(--serif);color:var(--body);line-height:1.8;font-size:16.5px}
 .takeaway{display:inline-block;font-family:var(--sans);font-size:10px;line-height:1.5;letter-spacing:.06em;color:var(--accent);font-weight:700;border-top:1px solid var(--rule);padding-top:7px;margin-top:2px}
 
 /* ---- learning sections ---- */
 .learning{border-top:1px solid var(--rule-strong);margin-top:34px;padding-top:20px;max-width:52rem}
 .learning ol{font:17px/1.9 var(--serif);padding-left:25px}
 .columns{columns:2;column-gap:44px;margin-top:6px}
-.columns p{break-inside:avoid;font-family:var(--serif);font-size:15.5px;line-height:1.75}
+.columns p{break-inside:avoid;font-family:var(--serif);font-size:16.5px;line-height:1.85}
 .columns p strong{color:var(--ink)}
 
 /* ---- pull quote ---- */
@@ -122,7 +123,7 @@ p{margin:0 0 15px}
 .check-btn.done{background:var(--accent);border-color:var(--accent);color:#fff;cursor:default}
 .mcq{margin:16px 0}
 .mcq>p{font-family:var(--serif);font-size:16.5px}
-.mcq .opt{display:block;width:100%;text-align:left;font-family:var(--serif);font-size:16px;background:var(--sheet);border:1px solid var(--rule);border-radius:4px;padding:12px 15px;margin:9px 0;cursor:pointer;transition:.15s}
+.mcq .opt{display:block;width:100%;text-align:left;font-family:var(--serif);font-size:17px;background:var(--sheet);border:1px solid var(--rule);border-radius:4px;padding:12px 15px;margin:9px 0;cursor:pointer;transition:.15s}
 .mcq .opt:hover{border-color:var(--ink)}
 .mcq .opt.correct{border-color:var(--accent);background:#f7ebe8;color:var(--accent);font-weight:700}
 .mcq .opt.wrong{opacity:.42}
@@ -151,7 +152,7 @@ p{margin:0 0 15px}
 .issue-row:hover{background:var(--band)}
 .issue-row .d{font-family:var(--sans);font-size:11px;letter-spacing:.1em;color:var(--accent);font-weight:700;margin-bottom:8px}
 .issue-row h3{margin:0 0 7px;font-size:22px}
-.issue-row p{color:var(--body);margin:0 0 9px;font-family:var(--serif);font-size:15px;line-height:1.65}
+.issue-row p{color:var(--body);margin:0 0 9px;font-family:var(--serif);font-size:16px;line-height:1.7}
 .issue-row .kw span{display:inline-block;font-family:var(--sans);font-size:10.5px;color:var(--muted);border:1px solid var(--rule);border-radius:11px;padding:2px 9px;margin:2px 5px 0 0}
 .empty{color:var(--muted);font-family:var(--serif);padding:26px 0}
 
