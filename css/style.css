@@ -97,6 +97,9 @@ p{margin:0 0 15px}
 
 .sources{font-family:var(--sans);font-size:11.5px;letter-spacing:.01em;color:var(--muted);margin-top:32px;line-height:1.7;border-top:1px solid var(--rule);padding-top:14px}
 .sources .meta{margin-bottom:6px}
+.sources p{margin:0 0 5px}
+.sources a{color:var(--accent);font-weight:700;text-decoration:none;border-bottom:1px solid transparent}
+.sources a:hover{border-bottom-color:var(--accent)}
 
 /* ---- feature / issue list / cards (weekly, monthly landings) ---- */
 .feature{border-top:3px solid var(--rule-strong);padding-top:16px;margin-bottom:28px}
