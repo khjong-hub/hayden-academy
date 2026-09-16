@@ -75,9 +75,10 @@ p{margin:0 0 15px}
 .note{background:var(--band);border-left:4px solid var(--accent);padding:16px 20px;margin:18px 0 4px;color:var(--body);max-width:52rem;border-radius:0 4px 4px 0;font-size:15.5px;line-height:1.7}
 .note strong{font-family:var(--sans);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent)}
 
-/* ---- story grid ---- */
-.story-grid{display:grid;grid-template-columns:1.3fr .9fr .9fr;gap:34px;margin-top:34px}
-.story{border-top:2px solid var(--rule-strong);padding-top:14px}
+/* ---- story grid (newspaper columns with vertical rules) ---- */
+.story-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:0;margin-top:34px;border-top:2px solid var(--rule-strong)}
+.story{padding:16px 26px 6px 0}
+.story+.story{border-left:1px solid var(--rule);padding-left:26px}
 .story p{font-family:var(--serif);color:var(--body);line-height:1.72;font-size:15.5px}
 .takeaway{display:inline-block;font-family:var(--sans);font-size:10px;line-height:1.5;letter-spacing:.06em;color:var(--accent);font-weight:700;border-top:1px solid var(--rule);padding-top:7px;margin-top:2px}
 
@@ -167,4 +168,42 @@ p{margin:0 0 15px}
   .search-tools{grid-template-columns:1fr}
   .issue-row{grid-template-columns:1fr;gap:4px}
   .bar-row{grid-template-columns:96px 1fr 40px}
+}
+
+/* ===== v0.7 newspaper front page (지면형 1면) ===== */
+.front .paper-head{padding-bottom:14px;margin-bottom:0;border-bottom:1px solid var(--rule)}
+.folio{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:10px;font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--rule);margin-top:12px;padding-top:8px}
+.frontpage{display:grid;grid-template-columns:2.05fr 1fr;border-top:4px solid var(--rule-strong);margin-top:0}
+.fp-lead{padding:24px 42px 34px 0;border-right:1px solid var(--rule);min-width:0}
+.fp-rail{padding:24px 0 34px 34px;min-width:0}
+.fp-lead .fp-kicker,.fp-rail .fp-kicker{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.fp-lead h2{font-family:var(--sans);font-weight:900;font-size:clamp(32px,4.6vw,54px);line-height:1.05;letter-spacing:-.025em;word-break:keep-all;text-wrap:balance;margin:2px 0 12px}
+.fp-lead h2 a:hover{color:var(--accent)}
+.fp-lead .fp-dek{font-family:var(--serif);font-size:clamp(16px,1.7vw,18.5px);line-height:1.8;color:#413d33;max-width:40rem}
+.fp-lead .fp-date{font-family:var(--sans);font-size:10.5px;letter-spacing:.1em;color:var(--muted);font-weight:700;margin-top:14px;text-transform:uppercase}
+.fp-rail .rail-head{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);border-bottom:2px solid var(--rule-strong);padding-bottom:7px;margin-bottom:4px}
+.rail-item{display:block;border-bottom:1px solid var(--rule);padding:14px 0}
+.rail-item .r-kicker{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.rail-item h3{font-family:var(--sans);font-weight:700;font-size:18px;line-height:1.25;margin:5px 0 5px;word-break:keep-all;text-wrap:balance}
+.rail-item:hover h3{color:var(--accent)}
+.rail-item p{font-family:var(--serif);font-size:13.5px;line-height:1.6;color:var(--muted);margin:0}
+.fp-sections{border-top:4px double var(--rule-strong);margin-top:30px;padding-top:14px}
+.fp-cols{display:grid;grid-template-columns:repeat(5,1fr);margin-top:10px}
+.fp-col{display:block;padding:16px 18px 22px;border-left:1px solid var(--rule)}
+.fp-col:first-child{border-left:0;padding-left:0}
+.fp-col .c-num{font-family:var(--sans);font-weight:900;font-size:13px;color:var(--accent);letter-spacing:.05em}
+.fp-col h3{font-family:var(--sans);font-weight:800;font-size:19px;line-height:1.22;margin:8px 0 7px;word-break:keep-all}
+.fp-col p{font-family:var(--serif);font-size:13.5px;line-height:1.62;color:var(--muted);margin:0}
+.fp-col:hover h3{color:var(--accent)}
+@media(max-width:900px){
+  .frontpage{grid-template-columns:1fr}
+  .fp-lead{padding:22px 0 26px;border-right:0;border-bottom:2px solid var(--rule-strong)}
+  .fp-rail{padding:22px 0 10px}
+  .fp-cols{grid-template-columns:1fr 1fr}
+  .fp-col,.fp-col:first-child{border-left:0;border-top:1px solid var(--rule);padding:16px 0}
+}
+@media(max-width:820px){
+  .story-grid{border-top:0}
+  .story{border-top:1px solid var(--rule-strong);padding:16px 0 6px}
+  .story+.story{border-left:0;padding-left:0}
 }
