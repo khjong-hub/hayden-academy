@@ -1,6 +1,14 @@
 {
-  "updated": "2026-10-03",
+  "updated": "2026-10-06",
   "issues": [
+    {
+      "type": "weekly",
+      "date": "2026-10-05",
+      "url": "weekly/2026-W41.html",
+      "title": "The Seed · 귀로 듣던 것을, 이제 눈으로 본다",
+      "summary": "10월 첫 주 성찰. 9월 수출 사상 최대·물가 2.9%·코스피 7,000선 회복이라는 좋은 평균 너머 석유류 14.8%와 반도체 한 기둥을 직접 보기. 욥기의 확신·멈춤·봄, 박람회·발달장애 청년 채용설명회·교육청 간담회, expectations 세 표현, 우리 집 석유류 지출 점검.",
+      "keywords": ["주간", "The Seed", "성찰", "욥기", "직접 보기", "소비자물가", "석유류", "수출", "반도체", "장애인 고용", "직무 구조", "난방비", "expectations", "fall short of expectations", "hit a record high"]
+    },
     {
       "type": "daily",
       "date": "2026-10-03",
