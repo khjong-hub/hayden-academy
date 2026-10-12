@@ -360,3 +360,11 @@ p{margin:0 0 15px}
 .eng-tag{font-family:var(--sans);font-size:9px;font-weight:800;letter-spacing:.08em;background:var(--accent);color:#fff;padding:1px 6px;border-radius:8px;vertical-align:middle;margin-left:4px}
 .eng-row-kr{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:2px}
 .eng-row-ex{font-family:var(--serif);font-style:italic}
+
+/* v1.4 · 모바일에서 양끝맞춤 해제(한글 자간 벌어짐 방지) */
+@media(max-width:820px){
+  .paper .frontpage-news .lead .dek,
+  .paper .lead .dek,
+  .paper .story p,
+  .paper .learning .columns{text-align:left}
+}
