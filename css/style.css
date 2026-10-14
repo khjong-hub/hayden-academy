@@ -368,3 +368,15 @@ p{margin:0 0 15px}
   .paper .story p,
   .paper .learning .columns{text-align:left}
 }
+
+/* ===== v1.5 · UDADA 독립 페이지(팀 공유) 테마 ===== */
+.udada-site{--accent:#276b5b}
+.udada-site .brand{font-family:var(--sans);font-weight:900;letter-spacing:.02em}
+.udada-site .brand::after{content:"SMALL STEP, REAL IMPACT · 청년 액션 커뮤니티";color:#6f8f88}
+.udada-site .badge{background:#276b5b}
+.udada-site .site-head{border-top-color:#276b5b}
+.udada-nav{display:flex;flex-wrap:wrap;gap:0;margin-top:12px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+.udada-nav a{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.11em;padding:4px 14px 4px 0;margin-right:14px;text-transform:uppercase;color:var(--muted)}
+.udada-nav a:hover{color:var(--accent)}
+.udada-nav a.back{margin-left:auto;margin-right:0;color:#9b958a}
+.udada-nav a.back:hover{color:var(--accent)}
