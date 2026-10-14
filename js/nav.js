@@ -14,4 +14,20 @@
       if (!matched && a.getAttribute('href').indexOf(seg + '/') > -1) { a.classList.add('is-active'); a.setAttribute('aria-current', 'page'); matched = true; }
     });
   }
+
+  /* 최상단 바로가기 버튼 — 매거진 전 페이지 공통 */
+  var btn = document.createElement('button');
+  btn.className = 'to-top';
+  btn.type = 'button';
+  btn.setAttribute('aria-label', '최상단으로');
+  btn.innerHTML = '↑';
+  btn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  function toggle() {
+    var y = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    btn.classList.toggle('show', y > 300);
+  }
+  window.addEventListener('scroll', toggle, { passive: true });
+  document.addEventListener('scroll', toggle, { passive: true, capture: true });
+  (document.body || document.documentElement).appendChild(btn);
+  toggle();
 })();
