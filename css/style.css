@@ -386,3 +386,9 @@ p{margin:0 0 15px}
 .proj-card{border-top:3px solid var(--rule-strong);padding-top:16px;margin-top:26px}
 .proj-card .proj-status{display:inline-block;font-family:var(--sans);font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:10px;color:#fff;background:var(--accent)}
 .proj-card .proj-status.soon{background:var(--muted)}
+
+/* v1.7 · 줄내림·정렬 정돈 */
+.intro,.dek,.idea p,.columns p,.step p,.lesson-body p,.eng-line,.rail-item p,.story p{text-wrap:pretty}
+.idea h4,.proj-card h2,.proj-card h3,.lead h2,.story h3{text-wrap:balance}
+.idea{display:flex;flex-direction:column}
+.idea .idea-link{margin-top:auto;align-self:flex-start;padding-top:6px}
