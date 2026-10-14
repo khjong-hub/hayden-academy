@@ -7,7 +7,7 @@
   var depth = location.pathname.replace(/\/[^/]*$/, '/').split('/').filter(Boolean).length; // 0=root, 1=한 폴더 깊이
   var base = el.getAttribute('data-src') || (depth >= 1 ? '../data/udada-ideas.json' : 'data/udada-ideas.json');
   fetch(base).then(function(r){return r.json();}).then(function(data){
-    var items=(data.ideas||[]).slice().sort(function(a,b){return a.date<b.date?1:-1;});
+    var items=(data.ideas||[]).slice().sort(function(a,b){return a.date<b.date?1:(a.date>b.date?-1:0);});
     if(!items.length){el.innerHTML='<div class="empty">아직 수집된 아이디어가 없습니다.</div>';return;}
     el.innerHTML='<div class="idea-grid">'+items.slice(0,12).map(function(it){
       return '<div class="idea">'+
